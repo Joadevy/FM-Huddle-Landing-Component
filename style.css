@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --letter: #e2e2e2;
+}
+
+/* MOBILE FIRST */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--violet);
+    background-image: url(../Codigo/images/bg-mobile.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+
+.element {
+    padding: 0 2rem;
+}
+
+.hero-cont{ 
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.hero-cont img {
+    width: 45%;
+}
+
+.hero-cont__image {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.hero-cont__image img {
+    width: 100%;
+}
+
+.main-cont {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+    color: var(--letter);
+}
+
+.main-cont__title {
+    font-family: 'Poppins', sans-serif;
+    line-height: 2.5rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.main-cont__p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.main-cont__cta {
+    font-family: 'Poppins';
+    background-color: var(--letter);
+    font-weight: 400;
+    color: var(--violet);
+    width: 65%;
+    align-self: center;
+    padding:.8rem;
+    border-radius: 30px;
+    border: none;
+    transition: background-color, color .5s,.5s;
+}
+
+.main-cont__cta:hover {
+    background-color: var(--soft-magenta);
+    color: var(--letter);
+}
+
+.cont-media {
+    display: flex;
+    gap:0.8rem;
+    justify-content:center;
+    margin-bottom: 2rem;
+}
+
+.cont-media img {
+    color: var(--letter);
+}
+
+/* DESKTOP FORM */
+
+@media screen and (min-width: 975px) {
+    
+    body {
+        background-image: url(../Codigo/images/bg-desktop.svg); 
+    }
+
+    .hero-cont img {
+        width: 15%;
+    }
+
+    .flex-cont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-cont__image {
+        width: 55%;
+    }
+
+    .main-cont {
+        margin-top: 3rem;
+        width: 45%;
+        text-align:left;
+        margin-right: 1rem;
+    }
+
+    .main-cont__title {
+        font-size: 2.3rem;
+        line-height: 3rem;
+        margin-right: 8rem;
+    }
+
+    .main-cont__p {
+        font-size: 1rem;
+    }
+
+    .main-cont__cta {
+        width: 30%;
+        align-self: start;
+    }
+
+    .cont-media {
+        justify-content: flex-end ;
+        margin-right: 2rem;
+    }
+}
